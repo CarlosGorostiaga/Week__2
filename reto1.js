@@ -42,7 +42,7 @@ class Person {
         // console.log("- Peso: " + this.weight);
         // console.log("- Altura: " + this.height);
         // console.log("- Hobbies: " + this.hobbies);
-        
+
 
         for (let lista in this)
             console.log("-" + lista + ": " + this[lista]);
@@ -59,10 +59,38 @@ class Person {
 
 }
 
-// METODOS
+// // METODOS
 
-let persona = new Person("nombre", 80, 1.70, 1996)
-console.log(persona.calculoIMC())
-console.log(persona.edad());
-console.log(persona.printAll());
-console.log(persona.printHobbies());
+// let persona = new Person("nombre", 80, 1.70, 1996)
+// console.log(persona.calculoIMC())
+// console.log(persona.edad());
+// console.log(persona.printAll());
+// console.log(persona.printHobbies());
+
+
+
+
+let per1 = new Person("Juan", 70, 1.70, 1980);
+let per2 = new Person("Pedro", 100, 1.80, 1990);
+let per3 = new Person("Ana", 50, 1.60, 1998);
+let per4 = new Person("Ander", 74, 1.68, 1996);
+
+let listado = [per1, per2, per3, per4];
+
+class Contacts {
+
+
+
+    constructor() {
+
+        this.listado = listado
+    }
+
+    printPersons() {
+        return listado;
+
+    }
+
+}
+let contacts = new Contacts();
+console.log(contacts);
